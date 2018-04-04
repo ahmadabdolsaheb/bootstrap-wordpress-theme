@@ -14,8 +14,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans');
 
-em {
-	font-style:normal;
+.meta{
+	color:gray;
+	font-family:'Merriweather Sans', sans-serif;
+	font-size: 16px;
+}
+
+.meta *{
+	color:gray;
+	font-family:'Merriweather Sans', sans-serif;
+	font-size: 16px;
+}
+
+.btn{
+	font-family:'Merriweather Sans', sans-serif;
+	font-size: 13px;
+}
+
+.form-control{
+	font-family:'Merriweather Sans', sans-serif;
+	font-size: 13px;
+}
+
+.navbar-brand{
+		font-family:'Merriweather Sans', sans-serif !important;
+		font-size: 40px !important;
+}
+
+.menu-item{
+		font-family:'Merriweather Sans', sans-serif !important;
 }
 
 .bg {
@@ -207,7 +234,7 @@ fieldset[disabled] .btn-sample.active {
 .navbar .nav > li.current-menu-item > a,
 .navbar .nav > li.current-menu-ancestor > a {
 
-	font-family:    Georgia;
+	font-family:'Merriweather Sans', sans-serif;
 
 }
 .navbar-default {

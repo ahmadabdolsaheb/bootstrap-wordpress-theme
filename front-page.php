@@ -14,9 +14,9 @@
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        
+
         <li data-target="#carousel-example-generic" data-slide-to="<?php echo $the_query->current_post; ?>" class="<?php if( $the_query->current_post == 0 ):?>active<?php endif; ?>"></li>
-        
+
         <?php endwhile; endif; ?>
       </ol>
 
@@ -29,24 +29,24 @@
 
         <div class="item <?php if( $the_query->current_post == 0 ):?>active<?php endif; ?>">
 
-  
+
           <div class="carousel-caption flex"> <h1 class="carosel-font"><a href="<?php the_permalink(); ?>">
 
-            <div class="container">         
+            <div class="container">
               <div class="row">
                 <div class="col-md-12" id="carusel-title">
 
             <?php the_title(); ?>
-                </div> 
-              </div> 
-            </div>         
+                </div>
+              </div>
+            </div>
           </a></h1>
 
             <a class="readmore" href="<?php the_permalink(); ?>"><button type="button" class="btn btn-default">Read More</button></a>
           </div>
 
         </div>
-        
+
         <?php endwhile; endif; ?>
 
       </div>
@@ -59,12 +59,12 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
     </div>
-  
+
     <!--social and newsletter-->
-    <div class="container">         
+    <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3  col-lg-2 col-lg-offset-1 center ">
-            <h1 class="no-top"><a href="https://www.facebook.com/pages/Norman-Finkelstein/308949505808407"><i class="fa fa-facebook-square"></i></a> 
+            <h1 class="no-top"><a href="https://www.facebook.com/pages/Norman-Finkelstein/308949505808407"><i class="fa fa-facebook-square"></i></a>
                 <a href="https://twitter.com/normfinkelstein"><i class="fa fa-twitter-square"></i></a>
                 <a href="http://normanfinkelstein.com/contacts/"><i class="fa fa-envelope-square"></i></a> </h1>
         </div>
@@ -73,17 +73,17 @@
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
             ">
-            <button type="image" name="submit" class="btn btn-info col-xs-12 col-sm-12 col-md-12 hidden-sm" alt="PayPal - The safer, easier way to pay online!"> 
+            <button type="image" name="submit" class="btn btn-info col-xs-12 col-sm-12 col-md-12 hidden-sm" alt="PayPal - The safer, easier way to pay online!">
               DONATE
                 <a href="#" class="hidden-sm">
                   <i class="fa fa-paypal"></i>
                 </a>
               PayPal
-            </button> 
-            <button type="image" name="submit" class="btn btn-info col-xs-12 col-sm-12 col-md-12 visible-sm" alt="PayPal - The safer, easier way to pay online!"> 
-              DONATE 
-            </button> 
-            </form>            
+            </button>
+            <button type="image" name="submit" class="btn btn-info col-xs-12 col-sm-12 col-md-12 visible-sm" alt="PayPal - The safer, easier way to pay online!">
+              DONATE
+            </button>
+            </form>
         </div>
         <div id="mc_embed_signup">
           <form class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 form-inline subscribe " role="form" action="//normanfinkelstein.us9.list-manage.com/subscribe/post?u=284edae059d93053e3ffcc14a&amp;id=320295a52d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -95,9 +95,9 @@
                     </div>
                 <button type="submit" class="btn btn-sample  col-xs-12 col-sm-5 col-md-5" id="mc-embedded-subscribe" name="subscribe" >Subscribe to Newsletter</button>
           </form>
-        </div>        
+        </div>
       </div>
-    </div> 
+    </div>
 
     <!-- three responsive columns -->
     <div class="container columns-top">
@@ -111,29 +111,29 @@
                 $postslist = get_posts('numberposts=4&category=35');
                 foreach ($postslist as $post) :
                   setup_postdata($post);
-              ?>              
+              ?>
               <div class="col-xs-12 col-sm-6 col-md-12 clearfix2">
                 <h4 class="">
-                  <a class=""href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h4>
                  <div class="row">
                   <div class="col-xs-6 col-md-6" id="autowid">
-                    <?php echo get_wp_user_avatar(get_the_author_meta('ID'), 150); ?>
+                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+                      <?php echo get_wp_user_avatar(get_the_author_meta('ID'), 150); ?>
+                    </a>
                   </div>
-                  <div class="col-xs-6 col-md-6" id="noleftpad">
-                    <p><em>Written by</em></p> 
-                    <h4><b><?php the_author_posts_link(); ?> </b></em></h4> 
+                  <div class="col-xs-6 col-md-6 meta" id="noleftpad">
+                    <p>Written by</p>
+                    <p><?php the_author_posts_link(); ?></p>
                     <p>
-                      <em>
                       <?php echo the_time(' F jS');?>
-                    </em>
                     </p>
                   </div>
                 </div>
               </div>
-              <?php endforeach ?>                      
+              <?php endforeach ?>
           </div>
-          <div class="center col-md-12" id="topbot"><a class="readmore" href="<?php echo esc_url( get_category_link( 35 )); ?>"><button type="button" class="btn btn-default"> More Voices </button></a></div>                      
+          <div class="center col-md-12" id="topbot"><a class="readmore" href="<?php echo esc_url( get_category_link( 35 )); ?>"><button type="button" class="btn btn-default"> More Voices </button></a></div>
         </div>
 
         <!-- column one: recent posts -->
@@ -152,22 +152,19 @@
                   <h3 class="">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                   </h3>
-                  <p><em>
-              
-                  On <?php echo the_time('l, F jS, Y');?>
+                  <p class="meta">
+                  On <?php echo the_time('F j, Y');?>
                   in <?php the_category( ', ' ); ?>.
-              
-                  </em></p>
-                  
+                  </p>
                 </div>
               </div>
             <?php endforeach ?>
             <div class="center col-md-12"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default"> More New Postings </button></a></div>
           </div>
         </div>
-        
-        
-        
+
+
+
         <!-- column one: videos -->
         <div class="col-md-3">
           <div class="row ">
@@ -190,9 +187,9 @@
           </div>
           <div class="center col-md-12"><a class="readmore" href="<?php echo esc_url( get_category_link( 9 )); ?>"><button type="button" class="btn btn-default"> More Videos </button></a></div>
         </div>
-        
+
       </div> <!-- end row -->
-      
+
       <!-- widgets -->
       <div class="row">
         <div class="col-md-4">
@@ -201,12 +198,12 @@
 
         </div>
         <div class="col-md-4">
-          
+
           <?php if ( dynamic_sidebar( 'front-center' ) ); ?>
 
         </div>
         <div class="col-md-4">
-          
+
           <?php if ( dynamic_sidebar( 'front-right' ) ); ?>
 
         </div>
