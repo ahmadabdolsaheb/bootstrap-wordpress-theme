@@ -7,9 +7,12 @@
         </div>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <article class="post">
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <p class="meta">On <?php echo the_time('F j, Y');?> </p>
-            <p class="meta">In <?php the_category( ', ' ); ?>.</p>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <p><em>
+              On <?php echo the_time('l, F jS, Y');?>
+              in <?php the_category( ', ' ); ?>.
+            </em></p>
+            <?php the_excerpt(); ?>
             <hr>
           </article>
         <?php endwhile;?>

@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Full Width with center widget Template
+  Template Name: Full Width with center widget Template Original
 */
 ?>
 <?php get_header(); ?>

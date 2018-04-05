@@ -12,43 +12,55 @@ Text Domain: bootstrap-to-wp
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,700|Merriweather:400,400i,700');
 .voice{
 	margin-bottom: 10px;
 }
 .meta{
 	color:gray;
-	font-family:'Merriweather Sans light', sans-serif;
+	font-family: sans-serif;
 	font-size: 16px;
 	font-weight: lighter;
 }
 
 .meta *{
 	color:gray;
-	font-family:'Merriweather Sans light', sans-serif;
+	font-family: sans-serif;
 	font-size: 16px;
 	font-weight: lighter;
 }
 
 .btn{
-	font-family:'Merriweather Sans', sans-serif;
+	font-family: sans-serif;
 	font-size: 13px;
 }
 
 .form-control{
-	font-family:'Merriweather Sans light', sans-serif;
-	font-size: 13px;
-	font-weight: lighter;
+	font-family: sans-serif;
 }
 
 .navbar-brand{
-		font-family:'Merriweather Sans light', sans-serif !important;
+		font-family:'Merriweather Sans', sans-serif !important;
 }
 
 .menu-item{
-		font-family:'Merriweather Sans light', sans-serif !important;
+		font-family:'Merriweather Sans', sans-serif !important;
 }
 
+li {
+	list-style-type: none;
+}
+
+div.widget{
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+
+}
+
+.meta-date{
+	font-weight:normal;
+}
 /* WORKING ABOVE THIS */
 .bg {
 	background-image: url(images/bg.jpg);
