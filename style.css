@@ -12,7 +12,7 @@ Text Domain: bootstrap-to-wp
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,700|Merriweather:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,700|Merriweather:400,400i,700,700i');
 .voice{
 	margin-bottom: 10px;
 }
@@ -58,9 +58,11 @@ div.widget{
 
 }
 
-.meta-date{
-	font-weight:normal;
+.content * {
+	font-family:'Merriweather', serif !important;
 }
+
+
 /* WORKING ABOVE THIS */
 .bg {
 	background-image: url(images/bg.jpg);

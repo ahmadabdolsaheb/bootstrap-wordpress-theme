@@ -5,8 +5,8 @@
 
 ?>
 <?php get_header(); ?>
-  <div class="container reading-field ">   
-    <div class="row ">     
+  <div class="container reading-field ">
+    <div class="row ">
       <div class="col-md-10 col-md-offset-1 title-full">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div >
@@ -14,7 +14,7 @@
               <?php the_title(); ?>
             </h1>
           </div>
-          <div >
+          <div class="content">
             <?php the_content(); ?>
           </div>
         <?php endwhile; else: ?>
@@ -23,9 +23,6 @@
           </div>
           <p>No content is appearing for this page!</p>
         <?php endif; ?>
-      </div>      
+      </div>
     </div>
 <?php get_footer(); ?>
-
-
-
