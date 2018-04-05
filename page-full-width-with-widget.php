@@ -16,10 +16,11 @@
               setup_postdata($post);
             ?>
           <div class="post">
-            <h2>
+            <h3>
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h2>
-            <p> <?php the_excerpt(); ?> <p>
+            </h3>
+            <p class="meta">On <?php echo the_time('F j, Y');?> </p>
+            <hr>
           </div>
           <?php endforeach ?>
           <div class="center col-md-12">
