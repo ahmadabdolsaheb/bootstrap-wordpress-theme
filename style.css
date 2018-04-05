@@ -156,9 +156,8 @@ p{
 }
 
 .reading-field{
-
 	background-color: rgba(255,255,255,.50);
-	border-radius:1em;
+	border-radius:2em;
 }
 
 
@@ -214,7 +213,6 @@ fieldset[disabled] .btn-sample.active {
 
 .column-background{
 	background-color: rgba(0,0,0,.03);
-
 	border-radius:2em;
 }
 
@@ -439,7 +437,7 @@ max-height: 200px;
 	padding:  1% 0;
 }
 .navbar-brand{
-	font-size: 3em;
+	font-size: 2.8em;
 	}
 }
 

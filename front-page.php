@@ -102,7 +102,60 @@
     <!-- three responsive columns -->
     <div class="container columns-top">
       <div class="row equal reading-field">
-        <div class="col-md-3">
+
+
+
+        <!-- column one: recent posts -->
+        <div class=" col-md-6 col-md-push-3">
+          <div class="row column-background">
+            <div>
+              <h2 class="center"><a href="<?php echo get_permalink(42); ?>">NEW POSTINGS</a><h2>
+            </div>
+            <?php
+              $postslist = get_posts('numberposts=10');
+              foreach ($postslist as $post) :
+                setup_postdata($post);
+            ?>
+              <div class="container col-md-12">
+                <div class="post col-xs-11 col-md-12">
+                  <h3 class="">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  </h3>
+                  <p class="meta">
+                  On <?php echo the_time('F j, Y');?>
+                  in <?php the_category( ', ' ); ?>.
+                  </p>
+                </div>
+              </div>
+            <?php endforeach ?>
+            <div class="center col-md-12"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default"> More New Postings </button></a></div>
+          </div>
+        </div>
+
+        <!-- column one: videos -->
+        <div class="col-md-3 col-md-push-3">
+          <div class="row ">
+            <div>
+              <h2 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">VIDEOS</a><h2>
+            </div>
+            <?php
+              $postslist = get_posts('numberposts=4&offset=0&category=9');
+              foreach ($postslist as $post) :
+                setup_postdata($post);
+              ?>
+            <div class="post  col-sm-6 col-md-12 clearfix2">
+              <h4>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h4>
+              <p> <?php the_excerpt(); ?> <p>
+            </div>
+            <?php endforeach ?>
+          </div>
+          <div class="center col-md-12"><a class="readmore" href="<?php echo esc_url( get_category_link( 9 )); ?>"><button type="button" class="btn btn-default"> More Videos </button></a></div>
+        </div>
+
+        <!-- three Voices -->
+        <div class="col-md-3 col-md-pull-9">
           <div class="row voices">
             <div>
               <h2 class="center"><a href="<?php echo esc_url( get_category_link( 35 )); ?>">VOICES</a><h2>
@@ -136,76 +189,25 @@
           <div class="center col-md-12" id="topbot"><a class="readmore" href="<?php echo esc_url( get_category_link( 35 )); ?>"><button type="button" class="btn btn-default"> More Voices </button></a></div>
         </div>
 
-        <!-- column one: recent posts -->
-        <div class=" col-md-6 ">
-          <div class="row column-background">
-            <div>
-              <h2 class="center"><a href="<?php echo get_permalink(42); ?>">NEW POSTINGS</a><h2>
-            </div>
-            <?php
-              $postslist = get_posts('numberposts=10');
-              foreach ($postslist as $post) :
-                setup_postdata($post);
-            ?>
-              <div class="container col-md-12">
-                <div class="post col-xs-11 col-md-12">
-                  <h3 class="">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                  </h3>
-                  <p class="meta">
-                  On <?php echo the_time('F j, Y');?>
-                  in <?php the_category( ', ' ); ?>.
-                  </p>
-                </div>
-              </div>
-            <?php endforeach ?>
-            <div class="center col-md-12"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default"> More New Postings </button></a></div>
-          </div>
-        </div>
-
-
-
-        <!-- column one: videos -->
-        <div class="col-md-3">
-          <div class="row ">
-            <div>
-              <h2 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">VIDEOS</a><h2>
-            </div>
-            <?php
-              $postslist = get_posts('numberposts=4&offset=0&category=9');
-              foreach ($postslist as $post) :
-                setup_postdata($post);
-              ?>
-
-            <div class="post  col-sm-6 col-md-12 clearfix2">
-              <h4>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              </h4>
-              <p> <?php the_excerpt(); ?> <p>
-            </div>
-            <?php endforeach ?>
-          </div>
-          <div class="center col-md-12"><a class="readmore" href="<?php echo esc_url( get_category_link( 9 )); ?>"><button type="button" class="btn btn-default"> More Videos </button></a></div>
-        </div>
-
-      </div> <!-- end row -->
-
-      <!-- widgets -->
-      <div class="row">
-        <div class="col-md-4">
-
-          <?php if ( dynamic_sidebar( 'front-left' ) ); ?>
-
-        </div>
-        <div class="col-md-4">
-
-          <?php if ( dynamic_sidebar( 'front-center' ) ); ?>
-
-        </div>
-        <div class="col-md-4">
-
-          <?php if ( dynamic_sidebar( 'front-right' ) ); ?>
-
-        </div>
       </div>
+    </div> <!-- end rows -->
+
+    <!-- widgets -->
+    <div class="row">
+      <div class="col-md-4">
+
+        <?php if ( dynamic_sidebar( 'front-left' ) ); ?>
+
+      </div>
+      <div class="col-md-4">
+
+        <?php if ( dynamic_sidebar( 'front-center' ) ); ?>
+
+      </div>
+      <div class="col-md-4">
+
+        <?php if ( dynamic_sidebar( 'front-right' ) ); ?>
+
+      </div>
+    </div>
 <?php get_footer(); ?>
