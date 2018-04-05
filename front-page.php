@@ -103,7 +103,7 @@
     <div class="container columns-top">
       <div class="row equal reading-field">
         <div class="col-md-3">
-          <div class="row">
+          <div class="row voices">
             <div>
               <h2 class="center"><a href="<?php echo esc_url( get_category_link( 35 )); ?>">VOICES</a><h2>
             </div>
@@ -112,7 +112,7 @@
                 foreach ($postslist as $post) :
                   setup_postdata($post);
               ?>
-              <div class="col-xs-12 col-sm-6 col-md-12 clearfix2">
+              <div class="col-xs-12 col-sm-6 col-md-12 clearfix2 voice">
                 <h4 class="">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h4>

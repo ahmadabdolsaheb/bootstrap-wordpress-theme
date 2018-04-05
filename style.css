@@ -13,17 +13,21 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans');
-
+.voice{
+	margin-bottom: 10px;
+}
 .meta{
 	color:gray;
-	font-family:'Merriweather Sans', sans-serif;
+	font-family:'Merriweather Sans light', sans-serif;
 	font-size: 16px;
+	font-weight: lighter;
 }
 
 .meta *{
 	color:gray;
-	font-family:'Merriweather Sans', sans-serif;
+	font-family:'Merriweather Sans light', sans-serif;
 	font-size: 16px;
+	font-weight: lighter;
 }
 
 .btn{
@@ -32,19 +36,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .form-control{
-	font-family:'Merriweather Sans', sans-serif;
+	font-family:'Merriweather Sans light', sans-serif;
 	font-size: 13px;
+	font-weight: lighter;
 }
 
 .navbar-brand{
-		font-family:'Merriweather Sans', sans-serif !important;
-		font-size: 40px !important;
+		font-family:'Merriweather Sans light', sans-serif !important;
 }
 
 .menu-item{
-		font-family:'Merriweather Sans', sans-serif !important;
+		font-family:'Merriweather Sans light', sans-serif !important;
 }
 
+/* WORKING ABOVE THIS */
 .bg {
 	background-image: url(images/bg.jpg);
 	background-repeat: no-repeat;
@@ -277,11 +282,7 @@ fieldset[disabled] .btn-sample.active {
 .navbar-toggle{
 	background-color: rgb(221, 221, 221);
 }
-.navbar-brand{
-	font-size: 1.3em;
-	font-family: Georgia;
 
-}
 .navbar-default .navbar-brand {
     color: white;
 }
@@ -389,8 +390,6 @@ max-height: 200px;
 	}
 	.navbar-brand{
 	font-size: 2em;
-
-
 	}
 
 }
@@ -406,8 +405,10 @@ max-height: 200px;
 		font-size: 3.7em;
 	}
 
+
+
 	.navbar-brand{
-	font-size: 2.7em;
+	font-size: 1.5em;
 	}
 }
 
@@ -427,7 +428,6 @@ max-height: 200px;
 }
 .navbar-brand{
 	font-size: 3em;
-
 	}
 }
 
