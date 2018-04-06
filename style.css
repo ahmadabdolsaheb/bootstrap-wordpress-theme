@@ -62,6 +62,9 @@ div.widget{
 	font-family:'Merriweather', serif !important;
 }
 
+.meta-bottom{
+	margin-top:-10px;
+}
 
 /* WORKING ABOVE THIS */
 .bg {

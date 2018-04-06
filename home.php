@@ -9,7 +9,7 @@
           <article class="post">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <p class="meta">On <?php echo the_time('F j, Y');?> </p>
-            <p class="meta">In <?php the_category( ', ' ); ?>.</p>
+            <p class="meta meta-bottom">In <?php the_category( ', ' ); ?>.</p>
             <hr>
           </article>
         <?php endwhile;?>

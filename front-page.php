@@ -177,10 +177,8 @@
                   </div>
                   <div class="col-xs-6 col-md-6 meta" id="noleftpad">
                     <p>Written by</p>
-                    <p><?php the_author_posts_link(); ?></p>
-                    <p>
-                      <?php echo the_time(' F jS');?>
-                    </p>
+                    <p class="meta-bottom"><?php the_author_posts_link(); ?></p>
+                    <p class="meta-bottom"><?php echo the_time(' F jS');?></p>
                   </div>
                 </div>
               </div>
