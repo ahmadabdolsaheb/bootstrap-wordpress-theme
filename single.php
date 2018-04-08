@@ -36,15 +36,9 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
           <div class="page-header">
-
-
             <h1 ><?php the_title(); ?></h1>
-            <p><em>
-
-              On <?php echo the_time('l, F jS, Y');?>
-              in <?php the_category( ', ' ); ?>.
-
-            </em></p>
+            <p class="meta">On <?php echo the_time('F j, Y');?> </p>
+            <p class="meta meta-bottom">In <?php the_category( ', ' ); ?>.</p>
           </div>
 
           <div class="wrapper">

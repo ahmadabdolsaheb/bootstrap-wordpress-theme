@@ -57,8 +57,8 @@ add_action( 'init', 'register_theme_menus' );
 function create_widget( $name, $id, $description ) {
 
 	register_sidebar(array(
-		'name' => __( $name ),	 
-		'id' => $id, 
+		'name' => __( $name ),
+		'id' => $id,
 		'description' => __( $description ),
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
@@ -95,16 +95,16 @@ function custom_wp_trim_excerpt($text) {
             }
           $i++;
           }
-        }  
+        }
       }
     }
     $excerpt_more = apply_filters('excerpt_more', ' ' . '<a class="readmore" href="'. get_permalink() .'"><button type="button" class="btn btn-default btn-xs">Read More</button></a>');
     $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
-    
+
     // Use First Video as Excerpt
     if ( $firstvid != null){
       $text = $firstvid.$text;
-    }  
+    }
   }
   return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
@@ -120,13 +120,30 @@ function my_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
-function fitvids_script() { 
+function fitvids_script() {
 echo '<script type="text/javascript">
-jQuery(document).ready(function($) {     
-$(".row").fitVids(); 
+jQuery(document).ready(function($) {
+$(".row").fitVids();
 });
 </script>';
-} 
+}
 add_action('wp_footer', 'fitvids_script');
+
+add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
+
+function filter_the_content_in_the_main_loop( $content ) {
+
+    // Check if we're inside the main loop in a single post page.
+    if ( is_single() && in_the_loop() && is_main_query() ) {
+			$content = preg_replace('#<p.*?>(.*?)</p>#i', '<p>\1</p>', $content);
+	    $content = preg_replace('#<span.*?>(.*?)</span>#i', '<span>\1</span>', $content);
+	    $content = preg_replace('#<ol.*?>(.*?)</ol>#i', '<ol>\1</ol>', $content);
+	    $content = preg_replace('#<ul.*?>(.*?)</ul>#i', '<ul>\1</ul>', $content);
+	    $content = preg_replace('#<li.*?>(.*?)</li>#i', '<li>\1</li>', $content);
+			$content = preg_replace('#class=".*?"#i', '', $content);
+        return $content;
+    }
+    return $content;
+}
 
 ?>
