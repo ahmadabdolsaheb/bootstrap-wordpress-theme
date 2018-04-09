@@ -143,11 +143,11 @@
               foreach ($postslist as $post) :
                 setup_postdata($post);
               ?>
-            <div class="post  col-sm-6 col-md-12 clearfix2">
+            <div class="post col-sm-6 col-md-12 clearfix2">
               <h4>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
               </h4>
-              <p> <?php the_excerpt(); ?> <p>
+              <p class="meta"> <?php echo  get_the_excerpt(); ?> <p>
             </div>
             <?php endforeach ?>
           </div>
