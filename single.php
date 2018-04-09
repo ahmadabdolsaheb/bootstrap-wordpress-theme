@@ -40,10 +40,7 @@
             <p class="meta">On <?php echo the_time('F j, Y');?> </p>
             <p class="meta meta-bottom">In <?php the_category( ', ' ); ?>.</p>
           </div>
-
-          <div class="wrapper">
-            <?php the_content(); ?>
-          </div>
+          <?php the_content(); ?>
           <hr>
           <?php if (in_category( 'voices')) { ?>
             <div class="row">

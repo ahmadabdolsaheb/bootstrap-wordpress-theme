@@ -24,10 +24,7 @@
         </div>
         <div class="col-sm-6">
           <h1><?php the_title(); ?></h1>
-
-          <div class="wrapper">
-            <?php the_content(); ?>
-          </div>       
+          <?php the_content(); ?>
         </div>
       <?php endwhile; else: ?>
         <div class="page-header">

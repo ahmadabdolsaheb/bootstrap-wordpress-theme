@@ -14,9 +14,7 @@
               <?php the_title(); ?>
             </h1>
           </div>
-          <div class="content">
-            <?php the_content(); ?>
-          </div>
+          <?php the_content(); ?>
         <?php endwhile; else: ?>
           <div>
             <h1>Oh no!</h1>
