@@ -78,6 +78,10 @@ div.widget{
 	font-weight: lighter;
 }
 
+.btn-defaults{
+	width:100% !important;
+}
+
 /* WORKING ABOVE THIS */
 .bg {
 	background-image: url(images/bg.jpg);

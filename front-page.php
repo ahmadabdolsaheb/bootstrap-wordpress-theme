@@ -93,7 +93,7 @@
                       <div class="response" id="mce-success-response" style="display:none"></div>
                       <div style="position: absolute; left: -5000px;"><input type="text" name="b_284edae059d93053e3ffcc14a_320295a52d" tabindex="-1" value=""></div>
                     </div>
-                <button type="submit" class="btn btn-sample  col-xs-12 col-sm-5 col-md-5" id="mc-embedded-subscribe" name="subscribe" >Subscribe to Newsletter</button>
+                <button type="submit" class="btn btn-sample col-xs-12 col-sm-5 col-md-5" id="mc-embedded-subscribe" name="subscribe" >Subscribe to Newsletter</button>
           </form>
         </div>
       </div>
@@ -128,8 +128,8 @@
                 </div>
               </div>
             <?php endforeach ?>
-            <div class="center col-md-12"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default"> More New Postings </button></a></div>
           </div>
+          <div class="center col-md-12"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default btn-block"> More New Postings </button></a></div>
         </div>
 
         <!-- column one: videos -->
@@ -151,40 +151,29 @@
             </div>
             <?php endforeach ?>
           </div>
-          <div class="center col-md-12"><a class="readmore" href="<?php echo esc_url( get_category_link( 9 )); ?>"><button type="button" class="btn btn-default"> More Videos </button></a></div>
+          <div class="center"><a class="readmore" href="<?php echo esc_url( get_category_link( 9 )); ?>"><button type="button" class="btn btn-default btn-block"> More Videos </button></a></div>
         </div>
 
-        <!-- three Voices -->
+        <!-- three FINKELSTEIN UNEXPURGATED-->
         <div class="col-md-3 col-md-pull-9">
-          <div class="row voices">
+          <div class="row ">
             <div>
-              <h2 class="center"><a href="<?php echo esc_url( get_category_link( 35 )); ?>">VOICES</a><h2>
+              <h2 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">FINKELSTEIN UNEXPURGATED</a><h2>
             </div>
-              <?php
-                $postslist = get_posts('numberposts=4&category=35');
-                foreach ($postslist as $post) :
-                  setup_postdata($post);
+            <?php
+              $postslist = get_posts('numberposts=4&offset=0&category=9');
+              foreach ($postslist as $post) :
+                setup_postdata($post);
               ?>
-              <div class="col-xs-12 col-sm-6 col-md-12 clearfix2 voice">
-                <h4 class="">
-                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </h4>
-                 <div class="row">
-                  <div class="col-xs-6 col-md-6" id="autowid">
-                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-                      <?php echo get_wp_user_avatar(get_the_author_meta('ID'), 150); ?>
-                    </a>
-                  </div>
-                  <div class="col-xs-6 col-md-6 meta" id="noleftpad">
-                    <p>Written by</p>
-                    <p class="meta-bottom"><?php the_author_posts_link(); ?></p>
-                    <p class="meta-bottom"><?php echo the_time(' F jS');?></p>
-                  </div>
-                </div>
-              </div>
-              <?php endforeach ?>
+            <div class="post col-sm-6 col-md-12 clearfix2">
+              <h4>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h4>
+              <p class="meta"> <?php echo  get_the_excerpt(); ?> <p>
+            </div>
+            <?php endforeach ?>
           </div>
-          <div class="center col-md-12" id="topbot"><a class="readmore" href="<?php echo esc_url( get_category_link( 35 )); ?>"><button type="button" class="btn btn-default"> More Voices </button></a></div>
+          <div class="center"><a class="readmore" href="<?php echo esc_url( get_category_link( 9 )); ?>"><button type="button" class="btn btn-default btn-block"> More Finkelstein Unexpurgated </button></a></div>
         </div>
 
       </div>
