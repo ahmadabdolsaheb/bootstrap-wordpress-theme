@@ -41,6 +41,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .navbar-brand{
 		font-family:'Merriweather Sans', sans-serif !important;
+		font-size: 20px;
 }
 
 .menu-item{
@@ -421,7 +422,7 @@ max-height: 200px;
     clear: left;
 	}
 	.navbar-brand{
-	font-size: 2em;
+	font-size: 34px;
 	}
 
 }
@@ -437,10 +438,8 @@ max-height: 200px;
 		font-size: 3.7em;
 	}
 
-
-
 	.navbar-brand{
-	font-size: 1.5em;
+	font-size: 18px;
 	}
 }
 
@@ -459,7 +458,7 @@ max-height: 200px;
 	padding:  1% 0;
 }
 .navbar-brand{
-	font-size: 2.8em;
+	font-size: 35px;
 	}
 }
 
