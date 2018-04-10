@@ -136,10 +136,10 @@
         <div class="col-md-3 col-md-push-3">
           <div class="row ">
             <div>
-              <h2 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">VIDEOS</a><h2>
+              <h3 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">VIDEOS</a><h3>
             </div>
             <?php
-              $postslist = get_posts('numberposts=4&offset=0&category=9');
+              $postslist = get_posts('numberposts=3&offset=0&category=9');
               foreach ($postslist as $post) :
                 setup_postdata($post);
               ?>
@@ -158,10 +158,10 @@
         <div class="col-md-3 col-md-pull-9">
           <div class="row ">
             <div>
-              <h2 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">FINKELSTEIN UNEXPURGATED</a><h2>
+              <h3 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">FINKELSTEIN UNEXPURGATED</a><h3>
             </div>
             <?php
-              $postslist = get_posts('numberposts=4&offset=0&category=9');
+              $postslist = get_posts('numberposts=3&offset=0&category=9');
               foreach ($postslist as $post) :
                 setup_postdata($post);
               ?>
