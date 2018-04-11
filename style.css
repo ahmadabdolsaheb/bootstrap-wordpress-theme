@@ -13,72 +13,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700|Merriweather:400,400i,700,700i');
-.voice{
-	margin-bottom: 10px;
-}
-.meta{
-	color:gray;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-weight: lighter;
-}
-
-.meta *{
-	color:gray;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-weight: lighter;
-}
-
-
-
-.form-control{
-	font-family: sans-serif;
-}
-
-.navbar-brand{
-		font-family:'Merriweather Sans', sans-serif !important;
-		font-size: 20px;
-}
-
-.menu-item{
-		font-family:'Merriweather Sans', sans-serif !important;
-}
-
-li {
-	list-style-type: none;
-}
-
-div.widget{
-	font-family: sans-serif;
-	font-size: 16px;
-	font-weight: lighter;
-
-}
-
-.content * {
-	font-family:'Merriweather', serif !important;
-}
-
-.meta-bottom{
-	margin-top:-10px;
-}
-
-.wrapper * {
-	font-family:'Merriweather', serif !important;
-	font-size: 16px;
-}
-
-.vid-post p{
-	color:gray;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-weight: lighter;
-}
-
-.widget > ul{
-	padding:0;
-}
 
 /* WORKING ABOVE THIS */
 .bg {
@@ -117,7 +51,6 @@ body {
 	text-align: center;
 }
 
-
 .carousel-inner {
 	vertical-align: middle;
 	min-height: 350px
@@ -154,7 +87,6 @@ a.left.carousel-control{
 	margin-bottom: 0px;
 	margin-top: 30px;
 }
-
 
 /*/ theme */
 .bottom{
@@ -377,9 +309,11 @@ height: auto;
 	margin-bottom: 20px;
 	text-align: left;
 }
+
 .blog-book{
 	max-height: 250px;
 }
+
 .book-main{
 max-height: 200px;
 }
@@ -390,6 +324,71 @@ max-height: 200px;
 
 .clearfix2:nth-child(2n){
     clear: left;
+}
+
+.voice{
+	margin-bottom: 10px;
+}
+
+.meta{
+	color:gray;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.meta *{
+	color:gray;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.form-control{
+	font-family: sans-serif;
+}
+
+.navbar-brand{
+		font-family:'Merriweather Sans', sans-serif !important;
+		font-size: 20px;
+}
+
+.menu-item{
+		font-family:'Merriweather Sans', sans-serif !important;
+}
+
+li {
+	list-style-type: none;
+}
+
+div.widget{
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.content * {
+	font-family:'Merriweather', serif !important;
+}
+
+.meta-bottom{
+	margin-top:-10px;
+}
+
+.wrapper * {
+	font-family:'Merriweather', serif !important;
+	font-size: 16px;
+}
+
+.vid-post p{
+	color:gray;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.widget > ul{
+	padding:0;
 }
 
 @media (max-width:540px) {
@@ -404,7 +403,6 @@ max-height: 200px;
 		font-size: 2.8em;
 	}
 }
-
 
 /* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
@@ -466,7 +464,6 @@ max-height: 200px;
 	font-size: 35px;
 	}
 }
-
 
 /* minor adjustement */
 #noleftpad{

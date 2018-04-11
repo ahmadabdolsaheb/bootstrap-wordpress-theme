@@ -26,16 +26,11 @@
       <div class="carousel-inner">
 
         <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
         <div class="item <?php if( $the_query->current_post == 0 ):?>active<?php endif; ?>">
-
-
           <div class="carousel-caption flex"> <h1 class="carosel-font"><a href="<?php the_permalink(); ?>">
-
             <div class="container">
               <div class="row">
                 <div class="col-md-12" id="carusel-title">
-
             <?php the_title(); ?>
                 </div>
               </div>
