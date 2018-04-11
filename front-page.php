@@ -103,8 +103,6 @@
     <div class="container columns-top">
       <div class="row equal reading-field">
 
-
-
         <!-- column one: recent posts -->
         <div class=" col-md-6 col-md-push-3">
           <div class="row column-background">
@@ -129,17 +127,17 @@
               </div>
             <?php endforeach ?>
           </div>
-          <div class="center col-md-12"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default btn-block"> More New Postings </button></a></div>
+          <div class="center"><a class="readmore" href="<?php echo get_permalink(42); ?>"><button type="button" class="btn btn-default btn-block"> More New Postings </button></a></div>
         </div>
 
         <!-- column one: videos -->
         <div class="col-md-3 col-md-push-3">
-          <div class="row ">
+          <div class="row column-background">
             <div>
               <h3 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">VIDEOS</a><h3>
             </div>
             <?php
-              $postslist = get_posts('numberposts=3&offset=0&category=9');
+              $postslist = get_posts('numberposts=4&offset=0&category=9');
               foreach ($postslist as $post) :
                 setup_postdata($post);
               ?>
@@ -155,13 +153,13 @@
         </div>
 
         <!-- three FINKELSTEIN UNEXPURGATED-->
-        <div class="col-md-3 col-md-pull-9">
-          <div class="row ">
+        <div class="col-md-3 col-md-pull-9 ">
+          <div class="row column-background">
             <div>
               <h3 class="center"><a href="<?php echo esc_url( get_category_link( 9 )); ?>">FINKELSTEIN UNEXPURGATED</a><h3>
             </div>
             <?php
-              $postslist = get_posts('numberposts=3&offset=0&category=9');
+              $postslist = get_posts('numberposts=4&offset=0&category=9');
               foreach ($postslist as $post) :
                 setup_postdata($post);
               ?>

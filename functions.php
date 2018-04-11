@@ -1,14 +1,11 @@
 <?php
 	function theme_styles() {
-
 		wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 		wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
-
 	}
 	add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 	function theme_js() {
-
 		global $wp_scripts;
 		wp_register_script( 'html5_shiv', 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js', '', '', false );
 		wp_register_script( 'respond_js', 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js', '', '', false );
@@ -16,7 +13,6 @@
 		$wp_scripts->add_data( 'respond_js', 'conditional', 'lt IE 9' );
 		wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 		wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery', 'bootstrap_js'), '', true );
-
 	}
 	add_action( 'wp_enqueue_scripts', 'theme_js' );
 
@@ -40,6 +36,7 @@
 	    }
 	    return $content;
 	}
+
 	add_theme_support( 'menus' );
 	add_theme_support( 'post-thumbnails' );
 
@@ -53,7 +50,6 @@
 	add_action( 'init', 'register_theme_menus' );
 
 	function create_widget( $name, $id, $description ) {
-
 		register_sidebar(array(
 			'name' => __( $name ),
 			'id' => $id,
@@ -72,7 +68,6 @@
 
 	// Custom Excerpt
 	function custom_wp_trim_excerpt($text) {
-
 	  $raw_excerpt = $text;
 	  if ( '' == $text ) {
 	    $text = get_the_content(''); // Original Content
@@ -99,11 +94,10 @@
 	    $excerpt_more = apply_filters('excerpt_more', ' ' . '<a class="readmore" href="'. get_permalink() .'"><button type="button" class="btn btn-default btn-xs">Read More</button></a>');
 	    $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
 
-
-
 	    // Use First Video as Excerpt
 	    if ( $firstvid != null){
 	      $text = $firstvid.$text;
+
 				if($text == "{{unknown}}") {
 					$text = "Video in the post";
 				}
@@ -114,6 +108,7 @@
 	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 	add_filter('get_the_excerpt', 'custom_wp_trim_excerpt');
 
+	//responsive videos
 	function my_scripts() {
 		wp_enqueue_script('jquery');
 		wp_register_script( 'fitvids-script', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery') );
@@ -124,16 +119,16 @@
 	add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
 	function fitvids_script() {
-	echo '<script type="text/javascript">
-	jQuery(document).ready(function($) {
-	$(".row").fitVids();
-	});
-	</script>';
+		echo '<script type="text/javascript">
+		jQuery(document).ready(function($) {
+		$(".row").fitVids();
+		});
+		</script>';
 	}
 	add_action('wp_footer', 'fitvids_script');
 
+	//santify pasted content
 	add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
-
 	function filter_the_content_in_the_main_loop( $content ) {
 
 	    // Check if we're inside the main loop in a single post page.
@@ -149,6 +144,7 @@
 	    return $content;
 	}
 
+  //adding wrapper to post content
 	add_action('the_content','ravs_content_div');
 	function ravs_content_div( $content ){
 	 return '<div class="wrapper">'.$content.'</div>';
