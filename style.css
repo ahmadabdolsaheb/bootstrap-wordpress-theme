@@ -173,7 +173,7 @@ fieldset[disabled] .btn-sample.active {
     text-decoration: underline;
 }
 
-.column-background{
+.reading-field-small{
 	background-color: rgba(0,0,0,.03);
 	border-radius:2em;
 }
@@ -379,7 +379,8 @@ div.widget{
 
 .wrapper * {
 	font-family:'Merriweather', serif !important;
-	font-size: 16px;
+	font-size: 17px;
+	line-height: 33px;
 }
 
 .vid-post p{
@@ -431,7 +432,7 @@ div.widget{
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px){
-	.column-background{
+	.reading-field-small{
 	background-color: rgba(0,0,0,0);
 	border-top-left-radius:0em;
 	border-top-right-radius:0em;
