@@ -2,7 +2,7 @@
 
   <div class="container">
     <div class="row reading-field">
-      <div class="col-md-7 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1">
         <div class="col-md-12 bottom">
           <div class="row">
 
@@ -41,7 +41,6 @@
             <p class="meta meta-bottom">In <?php the_category( ', ' ); ?>.</p>
           </div>
           <?php the_content(); ?>
-          <hr>
           <?php if (in_category( 'voices')) { ?>
             <div class="row">
             <div class="col-md-3" >
@@ -78,25 +77,17 @@
                   }
                 ?>
               </ul>
-
               <?php echo get_the_author_meta('description'); ?>
             </div>
             </div >
           <?php } ?>
         <?php endwhile; else: ?>
-
           <div class="page-header">
             <h1>Oh no!</h1>
           </div>
-
           <p>No content is appearing for this page!</p>
-
         <?php endif; ?>
-
       </div>
-
-      <?php get_sidebar( 'blog' ); ?>
-
     </div>
 
 
