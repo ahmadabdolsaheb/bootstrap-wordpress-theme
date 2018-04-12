@@ -273,8 +273,10 @@ fieldset[disabled] .btn-sample.active {
 }
 
 .sidebar {
-	margin-top: 40px;
-	color: #444;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: #444;
+    background: rgba(255,255,255, 0.5);
 }
 
 .sidebar h3 {
